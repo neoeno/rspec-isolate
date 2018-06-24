@@ -38,7 +38,7 @@ RSpec.describe ClassUnderTest, throw_on_call: [ CollaboratorClassOne, Collaborat
 end
 ```
 
-Or, if you prefer warnings to errors:
+Or, if you prefer warnings to errors.
 
 ```ruby
 RSpec.describe ClassUnderTest, warn_on_call: [ CollaboratorClassOne, CollaboratorClassTwo ] do
