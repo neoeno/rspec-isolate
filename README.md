@@ -80,7 +80,7 @@ end
 
 # spec/statement_formatter.rb
 
-RSpec.describe StatementFormatter, isolate: [ TransactionFormatter ] do
+RSpec.describe StatementFormatter, throw_on_call: [ TransactionFormatter ] do
   describe "#format" do
 
     # This will fail, as `StatementFormatter` will call `TransactionFormatter`
