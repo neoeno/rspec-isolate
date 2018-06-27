@@ -1,4 +1,4 @@
-class ThrowOnCall
+class ErrorOnCall
   def initialize(klass)
     @klass = klass
   end

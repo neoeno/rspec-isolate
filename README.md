@@ -32,9 +32,9 @@ require 'rspec/isolate'
 Add a tag to your describe block as below.
 
 ```ruby
-RSpec.describe ClassUnderTest, throw_on_call: [ CollaboratorClassOne, CollaboratorClassTwo ] do
+RSpec.describe ClassUnderTest, error_on_call: [ CollaboratorClassOne, CollaboratorClassTwo ] do
   # Calling any method on `CollaboratorClassOne` and `CollaboratorClassTwo` in
-  # the course of this test suite will throw an error.
+  # the course of this test suite will raise an error.
 end
 ```
 
@@ -80,7 +80,7 @@ end
 
 # spec/statement_formatter.rb
 
-RSpec.describe StatementFormatter, throw_on_call: [ TransactionFormatter ] do
+RSpec.describe StatementFormatter, error_on_call: [ TransactionFormatter ] do
   describe "#format" do
 
     # This will fail, as `StatementFormatter` will call `TransactionFormatter`
